@@ -1,0 +1,367 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya', sans-serif;
+    color: #E8A24B;
+    font-size: 20px;
+}
+
+.logo {
+    margin-right: 350px;
+    margin-left: 200px;
+    font-size: 70px;
+    font-family: 'Aguafina Script',sans-serif;
+}
+
+.nav {
+    padding-top: 10px;
+    background-color: #FFF0D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 40px;
+}
+
+.menu li a {
+    text-transform: none;
+    text-decoration: none;
+    color: #E8A24B;
+}
+
+header a {
+    color: #E8A24B;
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('../img/main.png') no-repeat center top / cover;
+
+}
+
+.welcome{
+    font-size: 100px;
+}
+
+.title {
+    font-family: 'Aguafina Script', sans-serif;
+    font-size: 200px;
+    padding-bottom: 50px;
+}
+
+#foodmenu {
+    background-color: #FFF0D8;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 100px;
+    color: #78341D;
+    padding-top: 10px;
+}
+
+.line2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.position {
+    box-sizing: border-box;
+    width: 23%;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+}
+
+img {
+    max-width: 100%;
+}
+
+.name {
+    font-size: 40px;
+}
+
+button .name,
+button .add, 
+button .about {
+    color: #E8A24B;
+    margin: 0 auto;
+}
+
+.about {
+    font-size: 20px;
+}
+
+.price {
+    align-items: center;
+    font-size: 40px;
+    color: #78341D;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 9px solid #78341D;
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
+    border-radius: 10%;
+}
+
+.footer {
+    margin: 0;
+    padding: 0;
+    background-color: #3B2317;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    padding-top: 5%;
+    margin-left: 125px;
+    padding-bottom: 20px;
+}
+
+.social {
+    padding-top: 5%;
+    margin-right: 125px;
+    padding-bottom: 20px;
+}
+
+.conf {
+    margin-bottom: 10px;
+    margin-top: 190px;
+}
+
+#open_modal_btn,
+#open_register_modal_btn {
+    border: none;
+    background: none;
+    color: #E8A24B;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .7);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s ;
+}
+
+.modal_box {
+    width: 600px;
+    height: 880px;
+    padding: 30px 90px;
+    z-index: 1;
+    margin: 30px 15px;
+    border-radius: 10px;
+    border: 10px solid #3B2317;
+    background: #FFF0D8;
+    transform: scale(0);
+    transition: transform .8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.open .modal_box {
+    transform: scale(1);
+}
+
+.register_modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .7);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s ;
+}
+
+.register_modal .modal_box {
+    width: 600px;
+    height: 880px;
+    padding: 30px 90px;
+    z-index: 1;
+    margin: 30px 15px;
+    background-color: #FFF0D8;
+    transform: scale(1);
+    transition: transform .8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register_modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.register_modal.open .modal_box {
+    transform: scale(1);
+}
+
+.add_modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .7);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s ;
+}
+
+.add_modal .modal_box {
+    width: 600px;
+    height: 880px;
+    padding: 30px 90px;
+    z-index: 1;
+    margin: 30px 15px;
+    background-color: #FFF0D8;
+    transform: scale(1);
+    transition: transform .8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add_modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.add_modal.open .modal_box {
+    transform: scale(1);
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    order: -1;
+}
+
+.close-icon:hover {
+    opacity: 0.8;
+}
+
+.logo_modal {
+    font-family: 'Aguafina Script',sans-serif;
+    font-size: 70px;
+}
+
+.title_modal {
+    font-size: 50px;
+}
+
+.registr-log_in,
+.log_in-registr {
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #78341D;
+}
+
+.form-group a {
+    text-align: center;
+    font-size: 30px;
+    color: #78341D;
+    margin-bottom: 20px;
+}
+
+form input {
+    font-size: 40px;
+    color: #E8A24B;
+}
+
+.log_in,
+.registration,
+.add_position {
+    min-width: 350px;
+    min-height: 350px;
+    font-size: 50px;
+    color: #78341D;
+    margin: 0 auto;
+    display: block;
+    border-color: #78341D;
+    background-color: #FFF;
+}
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    border: none;
+    text-align: center;
+    color: #E8A24B;
+    background: none;
+    outline: none;
+    border-bottom: 2px solid #78341D;
+    padding: 0;
+}
+
+textarea,
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #E8A24B;
+}
